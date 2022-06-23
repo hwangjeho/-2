@@ -15,6 +15,9 @@
 	<div id="header">
 		<p>게시판</p>
 	</div>
+	<div id="hmenu">
+		<img alt="햄버거메뉴" src="./img/burger.png">
+	</div>
 	<div id="menu">
 		<ul class="nav">
   			<li class="nav-item">
