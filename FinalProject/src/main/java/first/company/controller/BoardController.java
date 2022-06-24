@@ -56,5 +56,4 @@ public class BoardController {
 		mv.addObject("boardList", boardList);
 		return mv;
 	}
-	
 }

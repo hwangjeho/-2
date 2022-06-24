@@ -8,15 +8,17 @@
 <title>board</title>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
 <link rel="stylesheet" href="./css/menu.css">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <script type="text/javascript">
 $(document).ready(function(){
-	$("menu").css("display","none");
+	$("#mobileMenu").hide();
 	
 	$("#hmenu").on("click", function(){
 		//alert("메뉴클릭함");
-		$("menu").css("display", "block");
+		$("#mobileMenu").slideToggle(500);
 	});
 });
 </script>
@@ -48,7 +50,23 @@ th, td{
     			<a class="nav-link" href="./index.do">메인</a>
   			</li>
   			<li class="nav-item">
-    			<a class="nav-link disabled">Disabled</a>
+    			<a class="nav-link" href="./corona.do">코로나19</a>
+  			</li>
+		</ul>
+	</div>
+	<div id="mobileMenu">
+		<ul class="nav">
+  			<li class="nav-item">
+    			<a class="nav-link" href="./login.do">로그인</a>
+  			</li>
+  			<li class="nav-item">
+    			<a class="nav-link" href="./board.do">게시판</a>
+  			</li>
+  			<li class="nav-item">
+    			<a class="nav-link" href="./index.do">메인</a>
+  			</li>
+  			<li class="nav-item">
+    			<a class="nav-link" href="./corona.do">코로나19</a>
   			</li>
 		</ul>
 	</div>

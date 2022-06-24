@@ -8,6 +8,16 @@
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
 <link rel="stylesheet" href="./css/menu.css">
+<script type="text/javascript">
+$(document).ready(function(){
+	$("#mobileMenu").hide();
+	
+	$("#hmenu").on("click", function(){
+		//alert("메뉴클릭함");
+		$("#mobileMenu").slideToggle(500);
+	});
+});
+</script>
 </head>
 <body>
 	<div id="container">
@@ -29,7 +39,23 @@
     			<a class="nav-link" href="./index.do">메인</a>
   			</li>
   			<li class="nav-item">
-    			<a class="nav-link disabled">Disabled</a>
+    			<a class="nav-link" href="./corona.do">코로나19</a>
+  			</li>
+		</ul>
+	</div>
+	<div id="mobileMenu">
+		<ul class="nav">
+  			<li class="nav-item">
+    			<a class="nav-link" href="./login.do">로그인</a>
+  			</li>
+  			<li class="nav-item">
+    			<a class="nav-link" href="./board.do">게시판</a>
+  			</li>
+  			<li class="nav-item">
+    			<a class="nav-link" href="./index.do">메인</a>
+  			</li>
+  			<li class="nav-item">
+    			<a class="nav-link" href="./corona.do">코로나19</a>
   			</li>
 		</ul>
 	</div>
