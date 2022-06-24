@@ -60,7 +60,7 @@ $(document).ready(function(){
 		</ul>
 	</div>
 	<div id="main">
-		
+		${map }
 	</div>
 	<div id="footer">
 	
