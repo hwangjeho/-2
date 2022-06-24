@@ -18,6 +18,12 @@ $(document).ready(function(){
 	});
 });
 </script>
+<style type="text/css">
+th, td{
+	text-align: center;
+	vertical-align: middle;
+}
+</style>
 </head>
 <body>
 <div id="container">
@@ -39,7 +45,10 @@ $(document).ready(function(){
     			<a class="nav-link" href="./index.do">메인</a>
   			</li>
   			<li class="nav-item">
-    			<a class="nav-link" href="./corona.do">코로나19</a>
+    			<a class="nav-link" href="./corona2.do">코로나19</a>
+  			</li>
+  			<li class="nav-item">
+    			<a class="nav-link" href="./corona4.do">코로나19리스트</a>
   			</li>
 		</ul>
 	</div>
@@ -55,12 +64,45 @@ $(document).ready(function(){
     			<a class="nav-link" href="./index.do">메인</a>
   			</li>
   			<li class="nav-item">
-    			<a class="nav-link" href="./corona.do">코로나19</a>
+    			<a class="nav-link" href="./corona2.do">코로나19</a>
+  			</li>
+  			<li class="nav-item">
+    			<a class="nav-link" href="./corona4.do">코로나19리스트</a>
   			</li>
 		</ul>
 	</div>
 	<div id="main">
-		${map }
+		<h1>corona</h1>
+		<table class="table table-striped table-hover" >
+			<thead>
+				<tr>
+					<th scope="col" colspan="2">인구 10만명 당 확진 수</th>
+					<th scope="col" colspan="2">일일 확진 수</th>
+					<th scope="col" colspan="2">일일 재원 위중증</th>
+					<th scope="col" colspan="2">인구 10만명 당 신규 입원 수</th>
+					<th scope="col" colspan="2">일일 사망자 수</th>
+					<th scope="col" colspan="2">인구 10만명 당 사망자 수</th>
+					<th scope="col" colspan="2">인구 10만명 당 재원 위중증</th>
+					<th scope="col" colspan="2">일일 사망자 수</th>
+					<th scope="col" colspan="2">데이터 일시</th>
+				</tr>
+			</thead>
+			<tbody>
+					<tr>
+						<td colspan="2">${map.rate_confirmations }</td>
+						<td colspan="2">${map.cnt_confirmations }</td>
+						<td colspan="2">${map.cnt_severe_symptoms }</td>
+						<td colspan="2">${map.cnt_hospitalizations }</td>
+						<td colspan="2">${map.rate_deaths }</td>
+						<td colspan="2">${map.rate_hospitalizations }</td>
+						<td colspan="2">${map.rate_severe_symptoms }</td>
+						<td colspan="2">${map.cnt_deaths }</td>
+						<td colspan="2">${map.mmddhh }</td>
+						
+						
+					</tr>
+			</tbody>
+		</table>
 	</div>
 	<div id="footer">
 	

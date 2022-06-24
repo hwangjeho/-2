@@ -40,7 +40,10 @@ $(document).ready(function(){
     			<a class="nav-link" href="./index.do">메인</a>
   			</li>
   			<li class="nav-item">
-    			<a class="nav-link" href="./corona.do">코로나19</a>
+    			<a class="nav-link" href="./corona2.do">코로나19</a>
+  			</li>
+  			<li class="nav-item">
+    			<a class="nav-link" href="./corona4.do">코로나19리스트</a>
   			</li>
 		</ul>
 	</div>
@@ -56,7 +59,10 @@ $(document).ready(function(){
     			<a class="nav-link" href="./index.do">메인</a>
   			</li>
   			<li class="nav-item">
-    			<a class="nav-link" href="./corona.do">코로나19</a>
+    			<a class="nav-link" href="./corona2.do">코로나19</a>
+  			</li>
+  			<li class="nav-item">
+    			<a class="nav-link" href="./corona4.do">코로나19리스트</a>
   			</li>
 		</ul>
 	</div>

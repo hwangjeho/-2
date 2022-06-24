@@ -4,10 +4,10 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>login</title>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
 <link rel="stylesheet" href="./css/menu.css">
+<title>coronaList</title>
 <script type="text/javascript">
 $(document).ready(function(){
 	$("#mobileMenu").hide();
@@ -18,9 +18,15 @@ $(document).ready(function(){
 	});
 });
 </script>
+<style type="text/css">
+th, td{
+	text-align: center;
+	vertical-align: middle;
+}
+</style>
 </head>
 <body>
-	<div id="container">
+<div id="container">
 	<div id="header">
 		<p>게시판</p>
 	</div>
@@ -66,21 +72,33 @@ $(document).ready(function(){
 		</ul>
 	</div>
 	<div id="main">
-		<form action="./login.do" method="post">
-  			<div class="mb-3">
-    			<label for="exampleInputEmail1" class="form-label">아이디</label>
-    			<input type="text" class="form-control" id="exampleInputEmail1" name="id" aria-describedby="emailHelp">
-  			</div>
-  			<div class="mb-3">
-    			<label for="exampleInputPassword1" class="form-label">패스워드</label>
-    			<input type="password" class="form-control" id="exampleInputPassword1" name="pw">
-  			</div>
-  			<div class="mb-3 form-check">
-   				 <input type="checkbox" class="form-check-input" id="exampleCheck1">
-   				 <label class="form-check-label" for="exampleCheck1">체크</label>
-  			</div>
-  				<button type="submit" class="btn btn-primary">로그인</button>
-			</form>
+		<h1>corona</h1>
+		<table class="table table-striped table-hover" >
+			<thead>
+				<tr>
+					<th scope="col" colspan="2">글번호</th>
+					<th scope="col" colspan="2">기준일</th>
+					<th scope="col" colspan="2">기준시간</th>
+					<th scope="col" colspan="2">사망자수</th>
+					<th scope="col" colspan="2">확진자수</th>
+					<th scope="col" colspan="2">등록일</th>
+					<th scope="col" colspan="2">수정일</th>
+				</tr>
+			</thead>
+			<tbody>
+				<c:forEach items="${coronaList }" var="c">
+					<tr>
+						<td colspan="2">${c.seq }</td>
+						<td colspan="2">${c.stateDt }</td>
+						<td colspan="2">${c.stateTime }</td>
+						<td colspan="2">${c.deathCnt }</td>
+						<td colspan="2">${c.decideCnt }</td>
+						<td colspan="2">${c.createDt }</td>
+						<td colspan="2">${c.updateDt }</td>
+					</tr>
+				</c:forEach>
+			</tbody>
+		</table>
 	</div>
 	<div id="footer">
 	
