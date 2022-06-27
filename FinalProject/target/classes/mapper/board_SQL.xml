@@ -5,7 +5,16 @@
 	<select id="boardList" resultType="hashmap">
 		SELECT * 
 		FROM jun_boardview
-		LIMIT #{pageNo}, 10;
+		
+		<choose>
+			<when test="">
+				LIMIT #{pageNo}, 10;
+			</when>
+			<otherwise>
+				LIMIT 0, 10;
+			</otherwise>
+		</choose>
+		
 	</select>
 	<select id="login" parameterType="hashmap" resultType="hashmap">
 		SELECT * FROM jun_user WHERE u_id=#{id} AND u_pw=HEX(AES_ENCRYPT(#{pw}, SHA2('woori', 256)))
