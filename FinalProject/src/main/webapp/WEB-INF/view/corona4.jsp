@@ -50,6 +50,11 @@ th, td{
   			<li class="nav-item">
     			<a class="nav-link" href="./corona4.do">코로나19리스트</a>
   			</li>
+  			<c:if test="${sessionScope.id ne null }">
+  				<li class="nav-item">
+    				<a class="nav-link" href="./myinfo_${sessionScope.id }.do">내정보보기</a>
+  				</li>
+  			</c:if>
 		</ul>
 	</div>
 	<div id="mobileMenu">
@@ -69,6 +74,11 @@ th, td{
   			<li class="nav-item">
     			<a class="nav-link" href="./corona4.do">코로나19리스트</a>
   			</li>
+  			<c:if test="${sessionScope.id ne null }">
+  				<li class="nav-item">
+    				<a class="nav-link" href="./myinfo_${sessionScope.id }.do">내정보보기</a>
+  				</li>
+  			</c:if>
 		</ul>
 	</div>
 	<div id="main">
